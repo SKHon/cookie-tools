@@ -1,0 +1,24 @@
+<!--
+ * @Author: liujianghong
+ * @Date: 2020-09-03 17:59:08
+ * @LastEditTime: 2020-09-04 15:45:24
+ * @Descripttion: html
+-->
+
+<html>
+  <body>
+    <script>
+      
+      fetch('http://server.ke.com:8889/setcookie',
+      {
+        credentials: 'include'
+      })
+        .then(async function(response) {
+          let result = await response.json()
+          document.write(JSON.stringify(result))
+        })
+        
+    </script>
+    
+  </body>
+</html>

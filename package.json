@@ -1,0 +1,26 @@
+{
+  "name": "cookie-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SKHon/cookie-tools.git"
+  },
+  "author": "skhon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SKHon/cookie-tools/issues"
+  },
+  "homepage": "https://github.com/SKHon/cookie-tools#readme",
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-router": "^9.4.0"
+  }
+}
