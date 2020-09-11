@@ -9,9 +9,6 @@ const server = http.createServer(function (req, res) {
     }
     const parseUrl = url.parse(req.url, true);
 
-    console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-    console.log(parseUrl)
-
     // 路由1 /uploadForm    提交表单处理方法，在页面显示刚才表单内填写的内容
     // 路由2 /xssattack        xss 攻击接收浏览器发来的 cookie 接口
     // 路由3 /              返回一个表单
@@ -22,11 +19,12 @@ const server = http.createServer(function (req, res) {
         res.end();
     } else if (parseUrl.pathname === '/xssattack') {
         res.writeHead(200, {'content-Type':'text/html;charset=UTF-8'})
-        const pw = parseUrl.query.pw;
+        const pw = parseUrl.query.password;
+        console.log('password =======> ',pw)
         res.write(`i received message：${pw}`)
         res.end();
     } else {
-        res.writeHead(200, {'content-Type':'text/html;charset=UTF-8', 'Set-Cookie': 'myCookie=test'})
+        res.writeHead(200, {'content-Type':'text/html;charset=UTF-8', 'Set-Cookie': 'password=123'})
         res.write(`
             <form method="get" action="/uploadForm">
                 <input type="text" style="width: 600px;" placeholder="输入用户名" name="username">

@@ -5,7 +5,10 @@ const Koa       = require("koa");
 const app       = new Koa();
 
 app.use(async ctx => {
-  // ctx.cookies.set('name', 'ljh222')
+  //ctx.cookies.set('name', 'ljh-.ke.com', {domain: '.ke.com'})
+  //ctx.cookies.set('name', 'ljh-test.server.ke.com')
+  ctx.cookies.set('name1', 'ljh1-test.server.ke.com')
+   
   ctx.body = "hello https";
 });
 
