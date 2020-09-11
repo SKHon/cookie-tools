@@ -32,3 +32,7 @@
     };
     https.createServer(options, app.callback()).listen(443);
    ```
+
+## 模拟xss
+[demo](/example/xss)
+
